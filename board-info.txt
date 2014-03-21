@@ -1,1 +1,1 @@
-require board=odroidu2
+require board=odroidx2

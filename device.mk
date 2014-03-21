@@ -40,9 +40,9 @@
 # of hardware-specific resource overrides, typically the frameworks and
 # application settings that are stored in resourced.
 
-LOCAL_PATH := device/hardkernel/odroidu2
+LOCAL_PATH := device/hardkernel/odroidx2
 
-$(call inherit-product-if-exists, vendor/hardkernel/odroidu2/odroidu2-vendor.mk)
+$(call inherit-product-if-exists, vendor/hardkernel/odroidx2/odroidx2-vendor.mk)
 
 include $(LOCAL_PATH)/BoardConfig.mk
 
@@ -59,32 +59,32 @@ endif
 
 ifeq ($(BOARD_USES_EMMC),true)
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/vold_emmc.fstab:system/etc/vold.fstab
+	device/hardkernel/odroidx2/vold_emmc.fstab:system/etc/vold.fstab
 else
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/vold_sd.fstab:system/etc/vold.fstab
+	device/hardkernel/odroidx2/vold_sd.fstab:system/etc/vold.fstab
 endif
 
 # Init files
 
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/conf/init.odroidu2.rc:root/init.odroidu2.rc \
-	device/hardkernel/odroidu2/conf/fstab.odroidu2:root/fstab.odroidu2
+	device/hardkernel/odroidx2/conf/init.odroidx2.rc:root/init.odroidx2.rc \
+	device/hardkernel/odroidx2/conf/fstab.odroidx2:root/fstab.odroidx2
 
 ifeq ($(BOARD_WLAN_DEVICE), rt5370sta)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
         ro.wlaniface=ra0
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/conf/init.ra0.rc:root/init.wlan.rc
+	device/hardkernel/odroidx2/conf/init.ra0.rc:root/init.wlan.rc
 else
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
         ro.wlaniface=wlan0
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/conf/init.wlan0.rc:root/init.wlan.rc
+	device/hardkernel/odroidx2/conf/init.wlan0.rc:root/init.wlan.rc
 endif
 	
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/conf/init.odroidu2.usb.rc:root/init.odroidu2.usb.rc 
+	device/hardkernel/odroidx2/conf/init.odroidx2.usb.rc:root/init.odroidx2.usb.rc 
 
 #-------------------------------------------------------------------------------------
 #
@@ -108,14 +108,14 @@ endif
 ifeq ($(BOARD_USE_V4L2), true)
 ifeq ($(BOARD_USE_V4L2_ION), true)
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/conf/ueventd.odroidu2.v4l2ion.rc:root/ueventd.odroidu2.rc
+	device/hardkernel/odroidx2/conf/ueventd.odroidx2.v4l2ion.rc:root/ueventd.odroidx2.rc
 else
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/conf/ueventd.odroidu2.v4l2.rc:root/ueventd.odroidu2.rc
+	device/hardkernel/odroidx2/conf/ueventd.odroidx2.v4l2.rc:root/ueventd.odroidx2.rc
 endif
 else
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/conf/ueventd.odroidu2.rc:root/ueventd.odroidu2.rc
+	device/hardkernel/odroidx2/conf/ueventd.odroidx2.rc:root/ueventd.odroidx2.rc
 endif
 
 # Filesystem management tools
@@ -125,13 +125,13 @@ PRODUCT_PACKAGES += \
 
 # audio
 PRODUCT_PACKAGES += \
-	audio_policy.odroidu2 \
-	audio.primary.odroidu2 \
+	audio_policy.odroidx2 \
+	audio.primary.odroidx2 \
 	audio.a2dp.default \
 	libaudioutils
 
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/conf/audio_policy.conf:system/etc/audio_policy.conf
+	device/hardkernel/odroidx2/conf/audio_policy.conf:system/etc/audio_policy.conf
 
 # ULP Audio
 ifeq ($(USE_ULP_AUDIO),true)
@@ -187,8 +187,8 @@ PRODUCT_PACKAGES += com.google.widevine.software.drm.xml \
 
 # OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
-	device/hardkernel/odroidu2/media_profiles.xml:system/etc/media_profiles.xml \
-	device/hardkernel/odroidu2/media_codecs.xml:system/etc/media_codecs.xml
+	device/hardkernel/odroidx2/media_profiles.xml:system/etc/media_profiles.xml \
+	device/hardkernel/odroidx2/media_codecs.xml:system/etc/media_codecs.xml
 
 # OpenMAX IL modules
 PRODUCT_PACKAGES += \
@@ -205,7 +205,7 @@ PRODUCT_PACKAGES += \
 
 # gps
 PRODUCT_PACKAGES += \
-	gps.odroidu2
+	gps.odroidx2
 
 #-------------------------------------------------------------------------------------
 #

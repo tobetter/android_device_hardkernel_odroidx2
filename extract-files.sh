@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=hardkernel
-DEVICE=odroidu2
+DEVICE=odroidx2
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*

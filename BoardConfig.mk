@@ -18,7 +18,7 @@ TARGET_NO_BOOTLOADER := true
 #TARGET_NO_RECOVERY := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_PROVIDES_INIT_TARGET_RC := true
-TARGET_BOOTLOADER_BOARD_NAME := odroidu2
+TARGET_BOOTLOADER_BOARD_NAME := odroidx2
 
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_I2S_AUDIO := true
@@ -124,7 +124,7 @@ endif
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BLUETOOTH_HCI_USE_USB := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hardkernel/odroidu2/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hardkernel/odroidx2/bluetooth
 
 USE_OPENGL_RENDERER := true
 BOARD_CAMERA	:= odroidx
@@ -133,16 +133,16 @@ BOARD_HAVE_ODROID_GPS := true
 BOARD_SUPPORT_EXTERNAL_GPS := true
 
 # Try to build the kernel
-TARGET_KERNEL_CONFIG := odroidu2_android_emmc_defconfig
+TARGET_KERNEL_CONFIG := odroidx2_android_emmc_defconfig
 TARGET_KERNEL_SOURCE := kernel/hardkernel/4412-common
 
 COMMON_GLOBAL_CFLAGS += -DEXYNOS4_ENHANCEMENTS
 
-BOARD_CUSTOM_BOOTIMG_MK := device/hardkernel/odroidu2/uboot-bootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/hardkernel/odroidx2/uboot-bootimg.mk
 
 BOARD_USES_SAMSUNG_HDMI := true
 
-TARGET_SPECIFIC_HEADER_PATH := device/hardkernel/odroidu2/include
+TARGET_SPECIFIC_HEADER_PATH := device/hardkernel/odroidx2/include
 
 BOARD_EGL_NEEDS_LEGACY_FB := true
 
@@ -150,7 +150,7 @@ COMMON_GLOBAL_CFLAGS += -Idevice/hardkernel/samsung/$(TARGET_BOARD_PLATFORM)/lib
 COMMON_GLOBAL_CFLAGS += -Idevice/hardkernel/samsung/$(TARGET_BOARD_PLATFORM)/include
 
 TARGET_RECOVERY_PRE_COMMAND := "/system/bin/setup-recovery"
-BOARD_CUSTOM_GRAPHICS := ../../../device/hardkernel/odroidu2/recovery/graphics.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/hardkernel/odroidx2/recovery/graphics.c
 
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/hardkernel/odroidu2/releasetools/odroid_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/hardkernel/odroidx2/releasetools/odroid_ota_from_target_files

@@ -42,11 +42,11 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, device/hardkernel/odroidu2/device.mk)
+$(call inherit-product, device/hardkernel/odroidx2/device.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := odroidu2
-PRODUCT_DEVICE := odroidu2
+PRODUCT_NAME := odroidx2
+PRODUCT_DEVICE := odroidx2
 PRODUCT_MANUFACTURER := Hardkernel
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := ODROID-U2
+PRODUCT_MODEL := ODROID-X2

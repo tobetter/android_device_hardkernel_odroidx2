@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=hardkernel
-DEVICE=odroidu2
+DEVICE=odroidx2
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

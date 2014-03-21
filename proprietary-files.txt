@@ -13,7 +13,7 @@ lib/egl/libGLESv2_mali.so
 lib/libMali.so
 lib/libUMP.so
 lib/libion.so
-lib/hw/gralloc.odroidu2.so
+lib/hw/gralloc.odroidx2.so
 vendor/firmware/mfc_fw.bin
 vendor/firmware/fimc_is_fw.bin
 vendor/firmware/setfile.bin
